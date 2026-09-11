@@ -1,0 +1,17 @@
+[project]
+name = "experiment-001-provenance-reconstruction"
+version = "0.1.0"
+description = "Can independently observable telemetry reconstruct the trajectory leading to a dangerous autonomous-agent action?"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.7,<3", "langgraph>=0.2,<2"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
+
+[tool.setuptools]
+packages = ["experiment", "ground_truth"]

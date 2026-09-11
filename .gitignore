@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# Intermediate runs of the preview-cap sweep; regenerate with
+#   python -m experiment sensitivity
+# The measured results are kept in artifacts/summary/sensitivity.json.
+artifacts/sensitivity/

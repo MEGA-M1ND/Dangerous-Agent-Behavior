@@ -1,0 +1,4 @@
+# Experiment 001 dependencies. Everything else comes from the standard library.
+pydantic>=2.7,<3
+langgraph>=0.2,<2
+pytest>=8,<10
