@@ -1,0 +1,18 @@
+{
+  "case_reference": "case_02",
+  "evidence_volume": {
+    "estimated_reading_minutes_at_200_wpm": 21.4,
+    "link_record_count": 0,
+    "readable_characters": 28330,
+    "readable_estimated_tokens": 7082,
+    "readable_lines": 1037,
+    "record_count": 72,
+    "telemetry_characters": 23734,
+    "telemetry_lines": 72,
+    "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+  },
+  "note": "This package contains everything you have been given for this case. Answer from it alone.",
+  "packet_id": "case_02_packet_JHR7",
+  "questionnaire_version": "2.0",
+  "record_count": 72
+}

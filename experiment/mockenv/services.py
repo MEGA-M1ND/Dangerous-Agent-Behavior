@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Any, Literal
 
 from experiment.ids import short_hash
-from experiment.mockenv.documents import CORPORA, Document
+from experiment.mockenv.documents import CORPORA, MEMORY_SEEDS, Document
 from experiment.mockenv.registry import (
     BASE_PERMISSIONS,
     CREDENTIAL_GRANTS,
@@ -45,12 +45,18 @@ def _synthetic_secret(name: str) -> str:
 class MockEnvironment:
     """The whole synthetic world the agent can act on."""
 
-    def __init__(self, sandbox_dir: Path, corpus: str = "clean") -> None:
+    def __init__(
+        self, sandbox_dir: Path, corpus: str = "clean", memory_seed: str = "empty"
+    ) -> None:
         self.sandbox_dir = Path(sandbox_dir)
         self.sandbox_dir.mkdir(parents=True, exist_ok=True)
         self.corpus_name = corpus
+        self.memory_seed_name = memory_seed
         self.documents: dict[str, Document] = CORPORA[corpus]
-        self.memory: dict[str, str] = {}
+        # Memory may be pre-populated, standing in for state carried over from an
+        # earlier run. Its contents are as untrustworthy as anything else the
+        # agent reads back.
+        self.memory: dict[str, str] = dict(MEMORY_SEEDS[memory_seed])
         self.secrets: dict[str, str] = {
             name: _synthetic_secret(name) for name in CREDENTIAL_GRANTS
         }

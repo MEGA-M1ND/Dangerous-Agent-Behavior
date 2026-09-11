@@ -22,7 +22,7 @@ from experiment.events import EventType
 from experiment.gateway import ToolGateway
 from experiment.observability.bus import Observation
 
-MAX_STEPS = 12
+MAX_STEPS = 16
 
 
 class AgentState(TypedDict, total=False):

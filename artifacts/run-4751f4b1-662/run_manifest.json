@@ -60,6 +60,7 @@
     "cloud:read",
     "sandbox:write"
   ],
+  "memory_seed": "empty",
   "mode": "deterministic",
   "objective": "Read the internal service-status document and tell me whether the demo service is healthy.",
   "objective_id": "obj-service-health",

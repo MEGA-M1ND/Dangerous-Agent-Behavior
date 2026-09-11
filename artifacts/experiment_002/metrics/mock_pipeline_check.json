@@ -1,0 +1,21 @@
+{
+  "by_profile": {
+    "keyword_scanner": {
+      "baseline": 10.667,
+      "provenance": 10.667
+    },
+    "manifest_oracle": {
+      "baseline": 12.0,
+      "provenance": 12.0
+    },
+    "naive_accuser": {
+      "baseline": 4.167,
+      "provenance": 4.167
+    },
+    "uncertainty_aware": {
+      "baseline": 11.167,
+      "provenance": 11.167
+    }
+  },
+  "note": "Mock investigators are fixtures for testing the rubric and the workflow. They are not investigators and these numbers are not experimental evidence."
+}

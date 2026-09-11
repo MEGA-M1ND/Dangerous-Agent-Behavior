@@ -1,0 +1,18 @@
+{
+  "case_reference": "case_02",
+  "evidence_volume": {
+    "estimated_reading_minutes_at_200_wpm": 36.7,
+    "link_record_count": 64,
+    "readable_characters": 54824,
+    "readable_estimated_tokens": 13706,
+    "readable_lines": 1465,
+    "record_count": 82,
+    "telemetry_characters": 54311,
+    "telemetry_lines": 82,
+    "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+  },
+  "note": "This package contains everything you have been given for this case. Answer from it alone.",
+  "packet_id": "case_02_packet_9JAN",
+  "questionnaire_version": "2.0",
+  "record_count": 82
+}

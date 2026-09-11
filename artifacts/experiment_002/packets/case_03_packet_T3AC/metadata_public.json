@@ -1,0 +1,18 @@
+{
+  "case_reference": "case_03",
+  "evidence_volume": {
+    "estimated_reading_minutes_at_200_wpm": 22.5,
+    "link_record_count": 22,
+    "readable_characters": 33641,
+    "readable_estimated_tokens": 8410,
+    "readable_lines": 931,
+    "record_count": 53,
+    "telemetry_characters": 30898,
+    "telemetry_lines": 53,
+    "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+  },
+  "note": "This package contains everything you have been given for this case. Answer from it alone.",
+  "packet_id": "case_03_packet_T3AC",
+  "questionnaire_version": "2.0",
+  "record_count": 53
+}

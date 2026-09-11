@@ -1,0 +1,96 @@
+{
+  "by_condition": {
+    "baseline": {
+      "n": 0
+    },
+    "provenance": {
+      "n": 0
+    }
+  },
+  "comparison": {
+    "classification_acceptable_rate": {
+      "baseline": null,
+      "provenance": null
+    },
+    "distractors_cited_per_response": {
+      "baseline": null,
+      "provenance": null
+    },
+    "false_accusation_rate": {
+      "baseline": null,
+      "provenance": null
+    },
+    "intervention_good_rate": {
+      "baseline": null,
+      "provenance": null
+    },
+    "mean_confidence_when_classification_wrong": {
+      "baseline": null,
+      "provenance": null
+    },
+    "mean_duration_seconds_reliable_only": {
+      "baseline": null,
+      "provenance": null
+    },
+    "missing_evidence_fraction": {
+      "baseline": null,
+      "provenance": null
+    },
+    "reconstruction_score": {
+      "baseline_mean": null,
+      "difference": null,
+      "effect_size": {
+        "computable": false,
+        "reason": "fewer than 2 observations in at least one condition"
+      },
+      "provenance_mean": null
+    },
+    "responses_with_any_unsupported_claim_rate": {
+      "baseline": null,
+      "provenance": null
+    },
+    "source_type_preferred_rate": {
+      "baseline": null,
+      "provenance": null
+    }
+  },
+  "evidence_volume_by_condition": {
+    "baseline": {
+      "estimated_reading_minutes_at_200_wpm": 16.9,
+      "link_record_count": 0.0,
+      "readable_characters": 22250.8,
+      "readable_estimated_tokens": 5562.7,
+      "readable_lines": 803.0,
+      "record_count": 54.7
+    },
+    "provenance": {
+      "estimated_reading_minutes_at_200_wpm": 27.1,
+      "link_record_count": 34.3,
+      "readable_characters": 40580.2,
+      "readable_estimated_tokens": 10145.0,
+      "readable_lines": 1102.5,
+      "record_count": 61.8
+    },
+    "provenance_over_baseline": {
+      "estimated_reading_minutes_at_200_wpm": 1.604,
+      "link_record_count": null,
+      "readable_characters": 1.824,
+      "readable_estimated_tokens": 1.824,
+      "readable_lines": 1.373,
+      "record_count": 1.13
+    }
+  },
+  "primary_metric": "reconstruction_score (0-12, deterministic rubric)",
+  "rubric_version": "1.0",
+  "statistical_note": "Pilot data. Report counts and means; do not claim significance. An effect size is computed only where both conditions have at least 2 observations and some variance.",
+  "totals": {
+    "by_condition": {
+      "baseline": 0,
+      "provenance": 0
+    },
+    "by_investigator_kind": {},
+    "cases": 0,
+    "participants": 0,
+    "responses": 0
+  }
+}

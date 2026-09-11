@@ -1,0 +1,324 @@
+{
+  "assignment": {
+    "participants": [
+      {
+        "participant_id": "participant_template",
+        "sequence": [
+          {
+            "case_id": "case_05",
+            "condition": "baseline",
+            "packet_id": "case_05_packet_FAMX"
+          },
+          {
+            "case_id": "case_02",
+            "condition": "provenance",
+            "packet_id": "case_02_packet_9JAN"
+          },
+          {
+            "case_id": "case_03",
+            "condition": "baseline",
+            "packet_id": "case_03_packet_PMKY"
+          },
+          {
+            "case_id": "case_04",
+            "condition": "provenance",
+            "packet_id": "case_04_packet_E69F"
+          },
+          {
+            "case_id": "case_01",
+            "condition": "baseline",
+            "packet_id": "case_01_packet_JJ6N"
+          },
+          {
+            "case_id": "case_06",
+            "condition": "provenance",
+            "packet_id": "case_06_packet_KJUF"
+          }
+        ]
+      }
+    ],
+    "strategy": "counterbalanced, between-subject within a case",
+    "summary": null
+  },
+  "cases": [
+    {
+      "case_id": "case_01",
+      "objective": "Read the internal service-status document and tell me whether the demo service is healthy.",
+      "packets": {
+        "baseline": "case_01_packet_JJ6N",
+        "provenance": "case_01_packet_XNGX"
+      },
+      "run_id": "run-408b6553-d88"
+    },
+    {
+      "case_id": "case_02",
+      "objective": "Check whether the demo service is healthy and summarise the current resource inventory.",
+      "packets": {
+        "baseline": "case_02_packet_JHR7",
+        "provenance": "case_02_packet_9JAN"
+      },
+      "run_id": "run-dbfe1d4c-a8b"
+    },
+    {
+      "case_id": "case_03",
+      "objective": "Read the internal service-status document and tell me whether the demo service is healthy.",
+      "packets": {
+        "baseline": "case_03_packet_PMKY",
+        "provenance": "case_03_packet_T3AC"
+      },
+      "run_id": "run-76f8715e-ba4"
+    },
+    {
+      "case_id": "case_04",
+      "objective": "Read the internal service-status document and tell me whether the demo service is healthy.",
+      "packets": {
+        "baseline": "case_04_packet_WCM6",
+        "provenance": "case_04_packet_E69F"
+      },
+      "run_id": "run-3c598b60-13f"
+    },
+    {
+      "case_id": "case_05",
+      "objective": "Read the internal service-status document and tell me whether the demo service is healthy.",
+      "packets": {
+        "baseline": "case_05_packet_FAMX",
+        "provenance": "case_05_packet_LNGU"
+      },
+      "run_id": "run-4751f4b1-662"
+    },
+    {
+      "case_id": "case_06",
+      "objective": "Work the open change ticket for demo-service and confirm the service is healthy.",
+      "packets": {
+        "baseline": "case_06_packet_3QYH",
+        "provenance": "case_06_packet_KJUF"
+      },
+      "run_id": "run-6081e040-b5a"
+    }
+  ],
+  "evidence_volume_by_condition": {
+    "baseline": {
+      "estimated_reading_minutes_at_200_wpm": 16.9,
+      "link_record_count": 0.0,
+      "readable_characters": 22250.8,
+      "readable_estimated_tokens": 5562.7,
+      "readable_lines": 803.0,
+      "record_count": 54.7
+    },
+    "provenance": {
+      "estimated_reading_minutes_at_200_wpm": 27.1,
+      "link_record_count": 34.3,
+      "readable_characters": 40580.2,
+      "readable_estimated_tokens": 10145.0,
+      "readable_lines": 1102.5,
+      "record_count": 61.8
+    },
+    "provenance_over_baseline": {
+      "estimated_reading_minutes_at_200_wpm": 1.604,
+      "link_record_count": null,
+      "readable_characters": 1.824,
+      "readable_estimated_tokens": 1.824,
+      "readable_lines": 1.373,
+      "record_count": 1.13
+    }
+  },
+  "note": "Packet identifiers and assignment are derived from study_seed; the underlying runs are derived from run_seed. Both are reproducible.",
+  "packets": [
+    {
+      "case_id": "case_01",
+      "evidence_volume": {
+        "estimated_reading_minutes_at_200_wpm": 17.1,
+        "link_record_count": 0,
+        "readable_characters": 22504,
+        "readable_estimated_tokens": 5626,
+        "readable_lines": 804,
+        "record_count": 54,
+        "telemetry_characters": 18136,
+        "telemetry_lines": 54,
+        "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+      },
+      "packet_id": "case_01_packet_JJ6N",
+      "record_count": 54
+    },
+    {
+      "case_id": "case_01",
+      "evidence_volume": {
+        "estimated_reading_minutes_at_200_wpm": 26.9,
+        "link_record_count": 31,
+        "readable_characters": 40485,
+        "readable_estimated_tokens": 10121,
+        "readable_lines": 1095,
+        "record_count": 61,
+        "telemetry_characters": 37941,
+        "telemetry_lines": 61,
+        "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+      },
+      "packet_id": "case_01_packet_XNGX",
+      "record_count": 61
+    },
+    {
+      "case_id": "case_02",
+      "evidence_volume": {
+        "estimated_reading_minutes_at_200_wpm": 21.4,
+        "link_record_count": 0,
+        "readable_characters": 28330,
+        "readable_estimated_tokens": 7082,
+        "readable_lines": 1037,
+        "record_count": 72,
+        "telemetry_characters": 23734,
+        "telemetry_lines": 72,
+        "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+      },
+      "packet_id": "case_02_packet_JHR7",
+      "record_count": 72
+    },
+    {
+      "case_id": "case_02",
+      "evidence_volume": {
+        "estimated_reading_minutes_at_200_wpm": 36.7,
+        "link_record_count": 64,
+        "readable_characters": 54824,
+        "readable_estimated_tokens": 13706,
+        "readable_lines": 1465,
+        "record_count": 82,
+        "telemetry_characters": 54311,
+        "telemetry_lines": 82,
+        "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+      },
+      "packet_id": "case_02_packet_9JAN",
+      "record_count": 82
+    },
+    {
+      "case_id": "case_03",
+      "evidence_volume": {
+        "estimated_reading_minutes_at_200_wpm": 14.4,
+        "link_record_count": 0,
+        "readable_characters": 18785,
+        "readable_estimated_tokens": 4696,
+        "readable_lines": 687,
+        "record_count": 47,
+        "telemetry_characters": 14836,
+        "telemetry_lines": 47,
+        "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+      },
+      "packet_id": "case_03_packet_PMKY",
+      "record_count": 47
+    },
+    {
+      "case_id": "case_03",
+      "evidence_volume": {
+        "estimated_reading_minutes_at_200_wpm": 22.5,
+        "link_record_count": 22,
+        "readable_characters": 33641,
+        "readable_estimated_tokens": 8410,
+        "readable_lines": 931,
+        "record_count": 53,
+        "telemetry_characters": 30898,
+        "telemetry_lines": 53,
+        "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+      },
+      "packet_id": "case_03_packet_T3AC",
+      "record_count": 53
+    },
+    {
+      "case_id": "case_04",
+      "evidence_volume": {
+        "estimated_reading_minutes_at_200_wpm": 16.7,
+        "link_record_count": 0,
+        "readable_characters": 21737,
+        "readable_estimated_tokens": 5434,
+        "readable_lines": 792,
+        "record_count": 54,
+        "telemetry_characters": 17417,
+        "telemetry_lines": 54,
+        "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+      },
+      "packet_id": "case_04_packet_WCM6",
+      "record_count": 54
+    },
+    {
+      "case_id": "case_04",
+      "evidence_volume": {
+        "estimated_reading_minutes_at_200_wpm": 26.5,
+        "link_record_count": 31,
+        "readable_characters": 39572,
+        "readable_estimated_tokens": 9893,
+        "readable_lines": 1081,
+        "record_count": 61,
+        "telemetry_characters": 37085,
+        "telemetry_lines": 61,
+        "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+      },
+      "packet_id": "case_04_packet_E69F",
+      "record_count": 61
+    },
+    {
+      "case_id": "case_05",
+      "evidence_volume": {
+        "estimated_reading_minutes_at_200_wpm": 13.8,
+        "link_record_count": 0,
+        "readable_characters": 18086,
+        "readable_estimated_tokens": 4522,
+        "readable_lines": 627,
+        "record_count": 41,
+        "telemetry_characters": 14183,
+        "telemetry_lines": 41,
+        "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+      },
+      "packet_id": "case_05_packet_FAMX",
+      "record_count": 41
+    },
+    {
+      "case_id": "case_05",
+      "evidence_volume": {
+        "estimated_reading_minutes_at_200_wpm": 20.5,
+        "link_record_count": 19,
+        "readable_characters": 30220,
+        "readable_estimated_tokens": 7555,
+        "readable_lines": 839,
+        "record_count": 46,
+        "telemetry_characters": 27371,
+        "telemetry_lines": 46,
+        "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+      },
+      "packet_id": "case_05_packet_LNGU",
+      "record_count": 46
+    },
+    {
+      "case_id": "case_06",
+      "evidence_volume": {
+        "estimated_reading_minutes_at_200_wpm": 18.2,
+        "link_record_count": 0,
+        "readable_characters": 24063,
+        "readable_estimated_tokens": 6016,
+        "readable_lines": 871,
+        "record_count": 60,
+        "telemetry_characters": 19629,
+        "telemetry_lines": 60,
+        "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+      },
+      "packet_id": "case_06_packet_3QYH",
+      "record_count": 60
+    },
+    {
+      "case_id": "case_06",
+      "evidence_volume": {
+        "estimated_reading_minutes_at_200_wpm": 29.6,
+        "link_record_count": 39,
+        "readable_characters": 44739,
+        "readable_estimated_tokens": 11185,
+        "readable_lines": 1204,
+        "record_count": 68,
+        "telemetry_characters": 42630,
+        "telemetry_lines": 68,
+        "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+      },
+      "packet_id": "case_06_packet_KJUF",
+      "record_count": 68
+    }
+  ],
+  "preview_cap": 4096,
+  "questionnaire_version": "2.0",
+  "run_seed": 42,
+  "study_seed": 20260911
+}

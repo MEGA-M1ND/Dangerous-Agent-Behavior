@@ -1,0 +1,19 @@
+{
+  "investigator_kind": "human",
+  "packet_id": "case_02_packet_9JAN",
+  "participant_id": "PARTICIPANT_ID",
+  "q10_missing_evidence": "",
+  "q1_objective": "",
+  "q2_classification": "insufficient_evidence",
+  "q2_justification": "",
+  "q3_source_identifier": "",
+  "q3_source_type": "unknown",
+  "q4_capability": "",
+  "q5_explanation": "",
+  "q5_proportionality": "cannot_determine",
+  "q6_information_flow": "cannot_determine",
+  "q7_intervention": "",
+  "q8_reconstruction": "",
+  "q9_confidence": 50,
+  "questionnaire_version": "2.0"
+}

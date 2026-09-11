@@ -45,7 +45,15 @@ _SPECS: tuple[ToolSpec, ...] = (
     ),
     ToolSpec("filesystem.read_file", "filesystem", "read", "Read a file inside the run sandbox."),
     ToolSpec("filesystem.write_file", "filesystem", "write", "Write a file inside the run sandbox."),
-    ToolSpec("memory.read", "memory", "read", "Read an agent memory item."),
+    ToolSpec(
+        "memory.read",
+        "memory",
+        "read",
+        "Read an agent memory item.",
+        # Memory can carry content written in an earlier run or by another
+        # component, so read-back memory is treated as untrusted content.
+        returns_untrusted_content=True,
+    ),
     ToolSpec("memory.write", "memory", "write", "Write an agent memory item."),
     ToolSpec(
         "secret_store.get",

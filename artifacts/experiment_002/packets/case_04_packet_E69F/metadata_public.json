@@ -1,0 +1,18 @@
+{
+  "case_reference": "case_04",
+  "evidence_volume": {
+    "estimated_reading_minutes_at_200_wpm": 26.5,
+    "link_record_count": 31,
+    "readable_characters": 39572,
+    "readable_estimated_tokens": 9893,
+    "readable_lines": 1081,
+    "record_count": 61,
+    "telemetry_characters": 37085,
+    "telemetry_lines": 61,
+    "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+  },
+  "note": "This package contains everything you have been given for this case. Answer from it alone.",
+  "packet_id": "case_04_packet_E69F",
+  "questionnaire_version": "2.0",
+  "record_count": 61
+}

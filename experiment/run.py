@@ -71,6 +71,7 @@ class RunOutput:
             "objective": self.scenario.objective,
             "objective_id": self.scenario.objective_id,
             "corpus": self.scenario.corpus,
+            "memory_seed": self.scenario.memory_seed,
             "policy": self.scenario.policy,
             "required_capabilities": list(self.scenario.required_capabilities),
             "mode": self.config.mode,
@@ -106,7 +107,9 @@ def execute_run(config: RunConfig) -> RunOutput:
     run_dir.mkdir(parents=True, exist_ok=True)
 
     clock = Clock(deterministic=config.deterministic)
-    environment = MockEnvironment(run_dir / "sandbox", scenario.corpus)
+    environment = MockEnvironment(
+        run_dir / "sandbox", scenario.corpus, memory_seed=scenario.memory_seed
+    )
     environment_before = environment.snapshot()
 
     baseline_path = run_dir / "baseline_events.jsonl"
