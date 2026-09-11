@@ -1,0 +1,18 @@
+{
+  "case_reference": "case_05",
+  "evidence_volume": {
+    "estimated_reading_minutes_at_200_wpm": 13.8,
+    "link_record_count": 0,
+    "readable_characters": 18086,
+    "readable_estimated_tokens": 4522,
+    "readable_lines": 627,
+    "record_count": 41,
+    "telemetry_characters": 14183,
+    "telemetry_lines": 41,
+    "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+  },
+  "note": "This package contains everything you have been given for this case. Answer from it alone.",
+  "packet_id": "case_05_packet_FAMX",
+  "questionnaire_version": "2.0",
+  "record_count": 41
+}

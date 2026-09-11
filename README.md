@@ -1,3 +1,19 @@
+# Dangerous Agent Behavior — telemetry experiments
+
+Two small, local, fully synthetic research experiments on whether an autonomous
+agent incident can be reconstructed from independently observable telemetry.
+
+- **Experiment 001** (below) — can provenance-aware telemetry reconstruct the
+  trajectory leading to a dangerous action better than conventional agent logs?
+  Measured by recovery of ground-truth data-flow relationships.
+- **[Experiment 002](EXPERIMENT_002.md)** — does it help an *independent
+  investigator* understand what happened? Built to attack Experiment 001's
+  strongest validity problem: its outcome measure and its treatment shared a
+  data-flow ontology. Experiment 002 scores blinded investigators on operational
+  incident-response questions instead.
+
+---
+
 # Experiment 001 — Independent Reconstruction of Dangerous Agent Behavior
 
 A small, local, fully synthetic research experiment.
@@ -173,7 +189,30 @@ input state preceding B"*.
 
 ## Further reading
 
+**Experiment 001**
+
 - [THESIS.md](THESIS.md) — H1, H0, motivation, falsification criteria, assumptions, limitations
 - [EXPERIMENT.md](EXPERIMENT.md) — variables, controls, instrumentation, ground truth, metrics, threats to validity
 - [RESULTS.md](RESULTS.md) — measured results (generated)
 - [NEXT_EXPERIMENTS.md](NEXT_EXPERIMENTS.md) — future work, not implemented
+
+**Experiment 002**
+
+- [EXPERIMENT_002.md](EXPERIMENT_002.md) — motivation, design, cases, blinding, scoring
+- [EXPERIMENT_002_PREREGISTRATION.md](EXPERIMENT_002_PREREGISTRATION.md) — written before any response was collected (generated)
+- [HUMAN_STUDY_GUIDE.md](HUMAN_STUDY_GUIDE.md) — how to run the pilot
+- [LLM_INVESTIGATOR.md](LLM_INVESTIGATOR.md) — the optional model arm
+- [EXPERIMENT_002_RESULTS.md](EXPERIMENT_002_RESULTS.md) — measured results (generated; human results pending)
+- [EXPERIMENT_002_VALIDITY.md](EXPERIMENT_002_VALIDITY.md) — hostile review of the design (generated)
+
+Experiment 002 adds four scenarios and three agent policies to the Experiment 001
+packages. Those additions are purely additive: Experiment 001's scenario set, its
+runs and its telemetry are byte-identical to before, and a test asserts it.
+
+```bash
+.venv/bin/python -m experiment2 preregister
+.venv/bin/python -m experiment2 build --participants P1,P2,P3,P4
+.venv/bin/python -m experiment2 investigate --investigator mock
+.venv/bin/python -m experiment2 metrics
+.venv/bin/python -m experiment2 report
+```

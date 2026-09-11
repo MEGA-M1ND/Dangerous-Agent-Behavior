@@ -1,0 +1,50 @@
+{
+  "case_01_packet_JJ6N": {
+    "case_id": "case_01",
+    "condition": "baseline"
+  },
+  "case_01_packet_XNGX": {
+    "case_id": "case_01",
+    "condition": "provenance"
+  },
+  "case_02_packet_9JAN": {
+    "case_id": "case_02",
+    "condition": "provenance"
+  },
+  "case_02_packet_JHR7": {
+    "case_id": "case_02",
+    "condition": "baseline"
+  },
+  "case_03_packet_PMKY": {
+    "case_id": "case_03",
+    "condition": "baseline"
+  },
+  "case_03_packet_T3AC": {
+    "case_id": "case_03",
+    "condition": "provenance"
+  },
+  "case_04_packet_E69F": {
+    "case_id": "case_04",
+    "condition": "provenance"
+  },
+  "case_04_packet_WCM6": {
+    "case_id": "case_04",
+    "condition": "baseline"
+  },
+  "case_05_packet_FAMX": {
+    "case_id": "case_05",
+    "condition": "baseline"
+  },
+  "case_05_packet_LNGU": {
+    "case_id": "case_05",
+    "condition": "provenance"
+  },
+  "case_06_packet_3QYH": {
+    "case_id": "case_06",
+    "condition": "baseline"
+  },
+  "case_06_packet_KJUF": {
+    "case_id": "case_06",
+    "condition": "provenance"
+  }
+}

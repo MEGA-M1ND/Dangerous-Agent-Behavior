@@ -1,0 +1,18 @@
+{
+  "case_reference": "case_04",
+  "evidence_volume": {
+    "estimated_reading_minutes_at_200_wpm": 16.7,
+    "link_record_count": 0,
+    "readable_characters": 21737,
+    "readable_estimated_tokens": 5434,
+    "readable_lines": 792,
+    "record_count": 54,
+    "telemetry_characters": 17417,
+    "telemetry_lines": 54,
+    "token_estimate_method": "characters / 4 (crude; not a tokenizer)"
+  },
+  "note": "This package contains everything you have been given for this case. Answer from it alone.",
+  "packet_id": "case_04_packet_WCM6",
+  "questionnaire_version": "2.0",
+  "record_count": 54
+}

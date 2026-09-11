@@ -38,3 +38,7 @@ def events(runs) -> dict:
         }
         for scenario_id, run in runs.items()
     }
+
+
+# Experiment 002 fixtures live in their own module to keep this file readable.
+from tests.conftest_experiment2 import packets, study  # noqa: E402,F401
