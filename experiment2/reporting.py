@@ -247,6 +247,40 @@ def _condition_table(aggregate: dict[str, Any], metric_path: list[str]) -> str:
     return "\n".join(rows)
 
 
+def _pilot_status(study_design: dict[str, Any], response_counts: dict[str, int]) -> list[str]:
+    """What has actually been prepared, and what is still outstanding."""
+    assignment = study_design.get("assignment", {})
+    participants = [
+        entry
+        for entry in assignment.get("participants", [])
+        if entry["participant_id"] != "participant_template"
+    ]
+    if not participants:
+        return []
+    expected = sum(len(entry["sequence"]) for entry in participants)
+    collected = response_counts.get("human", 0) + response_counts.get("llm", 0)
+    summary = assignment.get("summary") or {}
+    return [
+        "### Pilot preparation",
+        "",
+        f"- participants enrolled: {len(participants)} "
+        f"({', '.join(entry['participant_id'] for entry in participants)})",
+        f"- assignment: {assignment.get('strategy', 'unknown')}",
+        "- observations per condition once complete: "
+        + ", ".join(
+            f"{condition}: {count}"
+            for condition, count in sorted(
+                (summary.get("observations_per_condition") or {}).items()
+            )
+        ),
+        f"- every case scheduled in both conditions: "
+        f"{_fmt(summary.get('every_case_seen_in_both_conditions'))}",
+        f"- responses expected: {expected}; collected: {collected}; "
+        f"outstanding: {expected - collected}",
+        "",
+    ]
+
+
 def build_results(
     study_design: dict[str, Any],
     metrics: dict[str, Any] | None,
@@ -272,6 +306,7 @@ def build_results(
         f"- model investigator responses collected: {response_counts.get('llm', 0)}",
         f"- mock pipeline responses (not evidence): {response_counts.get('mock', 0)}",
         "",
+        *_pilot_status(study_design, response_counts),
     ]
 
     if not metrics or metrics["aggregate"]["totals"]["responses"] == 0:

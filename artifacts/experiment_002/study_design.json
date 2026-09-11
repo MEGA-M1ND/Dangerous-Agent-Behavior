@@ -35,10 +35,184 @@
             "packet_id": "case_06_packet_KJUF"
           }
         ]
+      },
+      {
+        "participant_id": "P1",
+        "sequence": [
+          {
+            "case_id": "case_06",
+            "condition": "baseline",
+            "packet_id": "case_06_packet_3QYH"
+          },
+          {
+            "case_id": "case_04",
+            "condition": "baseline",
+            "packet_id": "case_04_packet_WCM6"
+          },
+          {
+            "case_id": "case_01",
+            "condition": "provenance",
+            "packet_id": "case_01_packet_XNGX"
+          },
+          {
+            "case_id": "case_05",
+            "condition": "provenance",
+            "packet_id": "case_05_packet_LNGU"
+          },
+          {
+            "case_id": "case_02",
+            "condition": "baseline",
+            "packet_id": "case_02_packet_JHR7"
+          },
+          {
+            "case_id": "case_03",
+            "condition": "provenance",
+            "packet_id": "case_03_packet_T3AC"
+          }
+        ]
+      },
+      {
+        "participant_id": "P2",
+        "sequence": [
+          {
+            "case_id": "case_06",
+            "condition": "provenance",
+            "packet_id": "case_06_packet_KJUF"
+          },
+          {
+            "case_id": "case_03",
+            "condition": "baseline",
+            "packet_id": "case_03_packet_PMKY"
+          },
+          {
+            "case_id": "case_02",
+            "condition": "provenance",
+            "packet_id": "case_02_packet_9JAN"
+          },
+          {
+            "case_id": "case_01",
+            "condition": "baseline",
+            "packet_id": "case_01_packet_JJ6N"
+          },
+          {
+            "case_id": "case_05",
+            "condition": "baseline",
+            "packet_id": "case_05_packet_FAMX"
+          },
+          {
+            "case_id": "case_04",
+            "condition": "provenance",
+            "packet_id": "case_04_packet_E69F"
+          }
+        ]
+      },
+      {
+        "participant_id": "P3",
+        "sequence": [
+          {
+            "case_id": "case_05",
+            "condition": "provenance",
+            "packet_id": "case_05_packet_LNGU"
+          },
+          {
+            "case_id": "case_03",
+            "condition": "provenance",
+            "packet_id": "case_03_packet_T3AC"
+          },
+          {
+            "case_id": "case_01",
+            "condition": "provenance",
+            "packet_id": "case_01_packet_XNGX"
+          },
+          {
+            "case_id": "case_06",
+            "condition": "baseline",
+            "packet_id": "case_06_packet_3QYH"
+          },
+          {
+            "case_id": "case_04",
+            "condition": "baseline",
+            "packet_id": "case_04_packet_WCM6"
+          },
+          {
+            "case_id": "case_02",
+            "condition": "baseline",
+            "packet_id": "case_02_packet_JHR7"
+          }
+        ]
+      },
+      {
+        "participant_id": "P4",
+        "sequence": [
+          {
+            "case_id": "case_02",
+            "condition": "provenance",
+            "packet_id": "case_02_packet_9JAN"
+          },
+          {
+            "case_id": "case_05",
+            "condition": "baseline",
+            "packet_id": "case_05_packet_FAMX"
+          },
+          {
+            "case_id": "case_03",
+            "condition": "baseline",
+            "packet_id": "case_03_packet_PMKY"
+          },
+          {
+            "case_id": "case_04",
+            "condition": "provenance",
+            "packet_id": "case_04_packet_E69F"
+          },
+          {
+            "case_id": "case_06",
+            "condition": "provenance",
+            "packet_id": "case_06_packet_KJUF"
+          },
+          {
+            "case_id": "case_01",
+            "condition": "baseline",
+            "packet_id": "case_01_packet_JJ6N"
+          }
+        ]
       }
     ],
     "strategy": "counterbalanced, between-subject within a case",
-    "summary": null
+    "summary": {
+      "balanced_overall": true,
+      "every_case_seen_in_both_conditions": true,
+      "observations_per_case": {
+        "case_01": {
+          "baseline": 2,
+          "provenance": 2
+        },
+        "case_02": {
+          "baseline": 2,
+          "provenance": 2
+        },
+        "case_03": {
+          "baseline": 2,
+          "provenance": 2
+        },
+        "case_04": {
+          "baseline": 2,
+          "provenance": 2
+        },
+        "case_05": {
+          "baseline": 2,
+          "provenance": 2
+        },
+        "case_06": {
+          "baseline": 2,
+          "provenance": 2
+        }
+      },
+      "observations_per_condition": {
+        "baseline": 12,
+        "provenance": 12
+      },
+      "participants": 4
+    }
   },
   "cases": [
     {

@@ -10,6 +10,14 @@ Conditions are named A (conventional logging) and B (conventional logging plus r
 - model investigator responses collected: 0
 - mock pipeline responses (not evidence): 48
 
+### Pilot preparation
+
+- participants enrolled: 4 (P1, P2, P3, P4)
+- assignment: counterbalanced, between-subject within a case
+- observations per condition once complete: baseline: 12, provenance: 12
+- every case scheduled in both conditions: yes
+- responses expected: 24; collected: 0; outstanding: 24
+
 **Human investigator results pending.** No human responses have been collected. See HUMAN_STUDY_GUIDE.md to run the pilot.
 
 **LLM investigator results not executed.** No model provider was configured when this document was generated. See LLM_INVESTIGATOR.md.

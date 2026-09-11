@@ -141,6 +141,80 @@ def build_packets(
     return built
 
 
+def build_facilitator_materials(
+    root: Path, assignments: list[Any], study_seed: int
+) -> Path:
+    """Run sheets for whoever is administering the session.
+
+    Deliberately does not name conditions. The facilitator holds `private/` and
+    could look them up, but nothing they read while sitting with a participant
+    should tell them which condition that participant is in - an experimenter who
+    knows can nudge without meaning to.
+    """
+    directory = root / "facilitator"
+    lines = [
+        "# Facilitator run sheets",
+        "",
+        f"Study seed `{study_seed}`. Assignment is counterbalanced and "
+        "between-subject: no participant sees the same incident twice.",
+        "",
+        "**These sheets do not name telemetry conditions, on purpose.** The mapping "
+        "exists in `private/condition_map.json`. Do not open it during a session, "
+        "and do not open it at all if you can avoid it until scoring is done.",
+        "",
+        "Before the first session, read HUMAN_STUDY_GUIDE.md. During a session, "
+        "give the participant only their own folder under `packets/<participant>/`.",
+        "",
+        "## Order of work",
+        "",
+        "| participant | 1 | 2 | 3 | 4 | 5 | 6 |",
+        "| --- | --- | --- | --- | --- | --- | --- |",
+    ]
+    for assignment in assignments:
+        cells = " | ".join(entry["case_id"] for entry in assignment.sequence)
+        lines.append(f"| {assignment.participant_id} | {cells} |")
+
+    for assignment in assignments:
+        lines += [
+            "",
+            f"## {assignment.participant_id}",
+            "",
+            f"Hand over: `artifacts/experiment_002/packets/{assignment.participant_id}/`",
+            "",
+            "| # | folder | when they open it | when they hand it back |",
+            "| --- | --- | --- | --- |",
+        ]
+        for position, entry in enumerate(assignment.sequence, start=1):
+            packet = entry["packet_id"]
+            lines.append(
+                f"| {position} | `{position:02d}_{packet}` | "
+                f"`python -m experiment2 start --participant {assignment.participant_id} "
+                f"--packet {packet}` | `python -m experiment2 submit --participant "
+                f"{assignment.participant_id} --answers <file>` |"
+            )
+        lines += [
+            "",
+            "After the last case, ask and write into "
+            f"`responses/{assignment.participant_id}/exit_notes.md`:",
+            "",
+            "1. Did you notice differences between the packages? What did you make of them?",
+            "2. Did you develop a rule of thumb as you went? What was it?",
+            "3. Had you seen any of these incidents before?",
+        ]
+    _write(directory / "run_sheets.md", "\n".join(lines) + "\n")
+
+    exit_template = (
+        "# Exit notes\n\n"
+        "## 1. Did you notice differences between the packages? What did you make of them?\n\n"
+        "## 2. Did you develop a rule of thumb as you went? What was it?\n\n"
+        "## 3. Had you seen any of these incidents before?\n\n"
+        "## Facilitator observations\n\n"
+    )
+    for assignment in assignments:
+        _write(root / "responses" / assignment.participant_id / "exit_notes.md", exit_template)
+    return directory
+
+
 def build_participant_bundle(
     root: Path, participant_id: str, sequence: list[dict[str, str]]
 ) -> Path:
@@ -186,6 +260,9 @@ def build_study(
     assignments = assign_participants(study_seed, [TEMPLATE_PARTICIPANT, *participant_ids])
     for assignment in assignments:
         build_participant_bundle(root, assignment.participant_id, assignment.sequence)
+    real = [a for a in assignments if a.participant_id != TEMPLATE_PARTICIPANT]
+    if real:
+        build_facilitator_materials(root, real, study_seed)
 
     # -- private material --------------------------------------------------- #
     private = root / "private"
